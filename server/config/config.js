@@ -36,9 +36,9 @@ if( process.env.NODE_ENV === 'dev' ){
     urlDB='mongodb://localhost:27017/cafe';
 }else {
     
-   
+  
 
-    urlDB='mongodb+srv://ggreco:linux1967*@cluster0-sw4qu.mongodb.net/cafe?retryWrites=true&w=majority';
+    urlDB=`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0-sw4qu.mongodb.net/cafe?retryWrites=true&w=majority`;
 
     
 }
