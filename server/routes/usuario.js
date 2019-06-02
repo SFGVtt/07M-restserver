@@ -1,4 +1,4 @@
-require('../config/config');
+
 const express = require('express');
 const bcrypt=require('bcrypt');
 const _ = require('underscore');

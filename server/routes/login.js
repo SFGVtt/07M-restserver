@@ -24,7 +24,14 @@ app.post('/login',(req,res)=>{
                 }
             });
         }
-
+        if(!body.password){
+            return res.status(400).json({
+                ok:false,
+                err:{
+                    message:'Debe ingresar un password'
+                }
+            });
+        }
         if(!bcrypt.compareSync(body.password,usuarioDB.password)){
             return res.status(400).json({
                 ok:false,
